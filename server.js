@@ -25,7 +25,7 @@ app.use((req, res, next) => {
 
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+    origin: [process.env.FRONT_WEBSITE_URL],
     methods: ["POST", "GET", "DELETE"],
     credentials: true,
   })
